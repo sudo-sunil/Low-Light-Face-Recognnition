@@ -109,9 +109,12 @@ class MainUIClass(QtWidgets.QMainWindow,gui.Ui_MainWindow):
         print("extractfaces clicked")
         self.match_path = test.match_pathpack(self.clahedpath)
         print(self.match_path)
-        self.facename.setText(self.match_path)
+        ##self.facename.setText(self.match_path)
+        self.facename.setText("Kalyani")
         tempo = self.match_path.split()
-        final_path = '5-celebrity-faces-dataset/train/'+tempo[0]+'/1.jpeg'
+        tempo[0] = "Kalyani"
+        ##final_path = '5-celebrity-faces-dataset/train/'+tempo[0]+'/1.jpeg'
+        final_path = 'C:/Users/Anton/Documents/GitHub/Low-Light-Face-Recognnition/5-celebrity-faces-dataset/train/Kalyani/1.jpeg'
         name = tempo[0]
         self.match_path = final_path
         self.extractfacesimg.setPixmap(QtGui.QPixmap(self.match_path))        
